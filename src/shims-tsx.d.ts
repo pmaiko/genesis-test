@@ -10,4 +10,14 @@ declare global {
       [elem: string]: any;
     }
   }
+
+  interface Window { $axios: any; _: any; }
+  interface _ { }
+}
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $axios: AxiosStatic;
+    _: any;
+  }
 }
